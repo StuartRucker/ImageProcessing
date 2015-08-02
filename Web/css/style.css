@@ -1,0 +1,48 @@
+body{
+    max-width: 100%;
+}
+
+.card{
+    padding: 30px;
+}
+.upload-img{
+    border: 3px #d3d3d3 dashed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 10px;
+}
+.container{
+    padding-bottom: 30px;
+}
+.upload-camera{
+    transform: scale(0.5)
+}
+.row{
+    width: 100%;
+}
+
+.left .card, .right .card{
+    height: 350px;
+}
+
+.left{
+    margin-bottom: 30px;
+}
+.auth-status{
+    position: fixed;
+    bottom: calc(0% - 37px);
+    right: 0%;
+    cursor: pointer;
+}
+.form-cont{
+    width: 70% !important;
+}
+.login-form-cont{
+    margin-bottom: 5vh;
+}
+
+.fp__btn{
+    opacity: 0;
+    position: absolute;
+}

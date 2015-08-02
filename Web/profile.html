@@ -1,0 +1,121 @@
+<html>
+<head>
+    <title>iStitch</title>
+    <!-- styles -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500' rel='stylesheet' type='text/css'>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/material-fullpalette.min.css" rel="stylesheet">
+    <link href="css/ripples.min.css" rel="stylesheet">
+
+
+    <style type="text/css">
+    a {color:#000;}
+    a:hover {text-decoration:none;}
+    a:visited {color:#000;}
+
+    /* slides styling */
+
+    .photo {width:100%; text-align:left; position:relative; margin:0 auto;}
+
+    .photo ul.topic {padding:0; margin:0; list-style:none; width: 100%; height:auto; position:relative; z-index:100;}
+
+    .photo ul.topic li {display:block; width:100%; height:31px; float:left;}
+    .photo ul.topic li a.set {display:block; font-size:11px; width:124px; height:30px; text-align:center; line-height:30px; color:#000; text-decoration:none; border:1px solid #fff; border-width:1px 1px 0 0; background:#aaa; font-family:verdana, arial, sans-serif;}
+
+    .photo ul.topic li.active ul
+    {display:block; position:absolute; left:0; top:31px; list-style:none; padding:0; margin:0; height:375px; background:#fff; width:100%; padding:40px 60px; z-index:100;}
+
+    .photo ul.topic li a ul,
+    .photo ul.topic li ul
+    {display:block; position:absolute; left:0; top:31px; list-style:none; padding:0; margin:0; height:375px; background:#eee; width:100%; padding:40px 60px; z-index:100;}
+
+    .photo ul.topic li ul li
+    {display:inline; width:200; height:164px; float:left; border:1px solid #fff; margin:1px;}
+
+    .photo ul.topic li ul li a img
+    {display:block; width:190px; height:145px; border:5px solid #eee;}
+
+    .photo ul.topic li a:hover ul li a:hover,
+    .photo ul.topic li:hover ul li a:hover
+    {white-space:normal; position:relative;}
+
+    .photo ul.topic li a:hover ul li a:hover img,
+    .photo ul.topic li:hover ul li a:hover img
+    {position:absolute; left:-50px; top:-32px; width:350px; height:auto; border-color:#fff;}
+
+    .imgs-row{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="navbar navbar-default">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">iStitch</a>
+        </div>
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="profile.html">My Pictures</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="login.html" class="navbar-login">Login</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="panel panel-danger auth-status-color" >
+        <div class="panel-heading auth-status">
+            <h3 class="panel-title auth-status-title">Logged Out</h3>
+        </div>
+    </div>
+
+    <button class="img-download" onclick="javascript:downloadImages()">Download Images</button>
+    <div class="photo">
+
+        <ul class="topic">
+            <li>
+                <ul class="imgs-row">
+
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- Libraries -->
+    <script src="js/jszip.min.js"></script>
+    <script src="js/filesaver.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript" src="http://api.filepicker.io/v2/filepicker.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Material Design for Bootstrap -->
+    <script src="js/material.min.js"></script>
+    <script src="js/ripples.min.js"></script>
+    <script>
+    $.material.init();
+    </script>
+
+    <script src="js/account.js"></script>
+    <script src="js/profile.js"></script>
+
+
+</body>
+</html>

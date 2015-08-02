@@ -1,0 +1,145 @@
+<html>
+<head>
+    <title>iStitch</title>
+    <!-- styles -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500' rel='stylesheet' type='text/css'>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/material-fullpalette.min.css" rel="stylesheet">
+    <link href="css/ripples.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="navbar navbar-default">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">iStitch</a>
+        </div>
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="profile.html">My Pictures</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="login.html" class="navbar-login">Login</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container upload-cont">
+
+        <div class="row">
+
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="upload-img">
+                        <center>
+                            <svg class="upload-camera" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+                                <g>
+                                    <circle fill="#d3d3d3" cx="255.811" cy="285.309" r="75.217"/>
+                                    <path fill="#d3d3d3" d="M477,137H352.718L349,108c0-16.568-13.432-30-30-30H191c-16.568,0-30,13.432-30,30l-3.718,29H34   c-11.046,0-20,8.454-20,19.5v258c0,11.046,8.954,20.5,20,20.5h443c11.046,0,20-9.454,20-20.5v-258C497,145.454,488.046,137,477,137   z M255.595,408.562c-67.928,0-122.994-55.066-122.994-122.993c0-67.928,55.066-122.994,122.994-122.994   c67.928,0,122.994,55.066,122.994,122.994C378.589,353.495,323.523,408.562,255.595,408.562z M474,190H369v-31h105V190z"/>
+                                </g>
+                            </svg>
+                            <img class="stitched-image" src=""></img>
+                            <br>
+                            <button class="filepickerimg">Choose Images</button>
+                            <button class="filepickervid">Choose a Video</button>
+                            <!-- <input type="checkbox" onClick="changeCheckVal(this)"> <span class="avi-type">AVI Quick</span> -->
+                        </center>
+                    </div>
+                </div>
+                <br>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <h4>Instructions</h4>
+                    <ul>
+                        <li>Select images (.jpg) or video sequences (.avi) to upload to the stitcher.</li>
+                        <li>Stitcher works best with continuous video scans. Stitcher assumes an image size of 400&micro;m x 400&micro;m</li>
+                    </ul>
+                </div>
+                <br><br>
+                <div class="card">
+                    <h4><u class="numUsers">0</u> Uploads to this Site</h4>
+
+                    <h4>Your Stats</h4>
+                    <ul>
+                        <li>Tortuosity : <span class="userTort">?</span></li>
+                        <li>CNBD : <span class="userCNBD">?</span><span> no./mm<sup>2</sup></span></li>
+                        <li>CNFD : <span class="userDens">?</span><span> no./mm<sup>2</sup></span></li>
+                        <li>CNFL : <span class="userLen">?</span><span> mm/mm<sup>2</sup></span></li>
+                        <li>Image Area : <span class="userArea">?</span><span> mm<sup>2</sup></span></li>
+                    </ul>
+                    <h4>Average Stats</h4>
+                    <ul>
+                        <li>Tortuosity : <span class="avgTort">?</span></li>
+                        <li>CNBD : <span class="avgCNBD">?</span><span> no./mm<sup>2</sup></span></li>
+                        <li>CNFD : <span class="avgDens">?</span><span> no./mm<sup>2</sup></span></li>
+                        <li>CNFL : <span class="avgLen">?</span><span> mm/mm<sup>2</sup></span></li>
+                        <li>Image Area : <span class="avgArea">?</span><span> mm<sup>2</sup></span></li>
+                    </ul>
+                    <h4>Server Status: <span class="server-status">Offline</span></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-danger auth-status-color" >
+        <div class="panel-heading auth-status" href="login.html">
+
+            <h3 class="panel-title auth-status-title">Logged Out</h3>
+
+        </div>
+        <input type="filepicker" data-fp-apikey="ALA3ug5doQavKkSInBaIoz" onchange="addImage(event.fpfile.url)"></input>
+
+    </div>
+
+    <!-- Libraries -->
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript">
+    (function(a) {
+        if (window.filepicker) {
+            return
+        }
+        var b = a.createElement("script");
+        b.type = "text/javascript";
+        b.async = !0;
+        b.src = ("https:" === a.location.protocol ? "https:" : "http:") + "//api.filepicker.io/v2/filepicker.js";
+        var c = a.getElementsByTagName("script")[0];
+        c.parentNode.insertBefore(b, c);
+        var d = {};
+        d._queue = [];
+        var e = "pick,pickMultiple,pickAndStore,read,write,writeUrl,export,convert,store,storeUrl,remove,stat,setKey,constructWidget,makeDropPane".split(",");
+        var f = function(a, b) {
+            return function() {
+                b.push([a, arguments])
+            }
+        };
+        for (var g = 0; g < e.length; g++) {
+            d[e[g]] = f(e[g], d._queue)
+        }
+        window.filepicker = d;
+
+    })(document);
+    </script>
+    <script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Material Design for Bootstrap -->
+    <script src="js/material.min.js"></script>
+    <script src="js/ripples.min.js"></script>
+    <script>
+    $.material.init();
+    </script>
+
+    <script src="js/account.js"></script>
+    <script src="js/main.js"></script>
+
+
+</body>
+</html>

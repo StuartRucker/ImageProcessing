@@ -1,0 +1,106 @@
+<html>
+<head>
+	<title>iStitch</title>
+	<!-- styles -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500' rel='stylesheet' type='text/css'>
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/material-fullpalette.min.css" rel="stylesheet">
+	<link href="css/ripples.min.css" rel="stylesheet">
+	<style type="text/css">
+	h1{
+		text-align: center;
+	}
+	.line{
+		background-color:black;
+		width:60%;
+		height:1px;
+		margin-bottom: 15px;
+	}
+	.glyphicon-user{
+		margin-right: 6px;
+	}
+	.card{
+		height: 250px;
+	}
+	.paper{
+		display: block;
+		margin-left: auto;
+	}
+	</style>
+</head>
+<body>
+	<div class="navbar navbar-default">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="index.html">iStitch</a>
+		</div>
+		<div class="navbar-collapse collapse navbar-responsive-collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="profile.html">My Pictures</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="login.html" class="navbar-login">Login</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="panel panel-danger auth-status-color" >
+		<div class="panel-heading auth-status">
+			<h3 class="panel-title auth-status-title">Logged Out</h3>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row" style="margin-left:0px;">
+			<div class="col-md-8">
+				<div class="card">
+					<div class="row">
+						<h1>What is iStitch</h1>
+
+					</div>
+					<center><div class="row line"></div></center>
+					<p>iStitch is a image processing system that calculates features with-in a cornea. It first stitches the images into one by using the opencv stitching algorithm. Then, it applies multiple filters to find just the veins within the image, and calculates statistics of those veins. For example, it finds corneal nerve fiber tortuosity (CNFTo), corneal nerve branch density (CNBD), corneal nerve fiber density (CNFD), and corneal nerve fiber length (CNFL).</p>
+					<button class="paper">Research Paper</button>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card">
+					<div class="row">
+						<h1>Creators</h1>
+					</div>
+					<center><div class="row line"></div></center>
+					<p><span class="glyphicon glyphicon-user" aria-hidden="true"></span><b>Yash Vaishnav:</b> Medical Student</p>
+					<p><span class="glyphicon glyphicon-user" aria-hidden="true"></span><b>Stuart Rucker:</b> Processing Algorithms/Website</p>
+					<p><span class="glyphicon glyphicon-user" aria-hidden="true"></span><b>Kalen Frieberg:</b> Image Processing/Website</p>
+					<p><span class="glyphicon glyphicon-user" aria-hidden="true"></span><b>Ayush A. Jain:</b> Website</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+	<script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
+	<script src="js/about.js"></script>
+	<script src="js/jquery.js"></script>
+	<!-- Bootstrap Core JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+
+	<!-- Material Design for Bootstrap -->
+	<script src="js/material.min.js"></script>
+	<script src="js/ripples.min.js"></script>
+	<script>
+	$.material.init();
+	</script>
+
+	<script src="js/account.js"></script>
+
+</body>
+</html>

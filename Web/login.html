@@ -1,0 +1,123 @@
+<html>
+<head>
+    <title>iStitch</title>
+    <!-- styles -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500' rel='stylesheet' type='text/css'>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/material-fullpalette.min.css" rel="stylesheet">
+    <link href="css/ripples.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="navbar navbar-default">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">iStitch</a>
+        </div>
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="profile.html">My Pictures</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="login.html" class="navbar-login">Login</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container upload-cont">
+        <center>
+            <div class="card form-cont login-form-cont">
+                <form class="form-horizontal login-form" novalidate>
+                    <fieldset>
+                        <legend>Login</legend>
+                        <div class="form-group" style = "white-space: nowrap; overflow: hidden">
+                            <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                            <div class="col-lg-10">
+                                <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                            <div class="col-lg-10">
+                                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-6 col-lg-offset-7">
+                                <button type="submit" class="btn btn-primary btn-login">Login</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="card form-cont">
+                <form class="form-horizontal signup-form">
+                    <fieldset>
+                        <legend>Sign Up</legend>
+                        <div class="form-group" style = "white-space: nowrap; overflow: hidden">
+                            <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="signEmail" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                            <div class="col-lg-10">
+                                <input type="password" class="form-control" id="signPassword" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword" class="col-lg-2 control-label">Repeat Password</label>
+                            <div class="col-lg-10">
+                                <input type="password" class="form-control" id="repSignPassword" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-6 col-lg-offset-7">
+                                <button type="submit" class="btn btn-primary btn-signup">Sign Up</button>
+                            </div>
+                        </div>
+                        <div class="alert alert-dismissable alert-danger">
+                            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                            <span class="sr-only">Error:</span>
+                            <span class="login-error"></span>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </center>
+    </div>
+
+
+
+    <div class="panel panel-danger auth-status-color" >
+        <div class="panel-heading auth-status" href="login.html">
+            <h3 class="panel-title auth-status-title">Logged Out</h3>
+        </div>
+    </div>
+</div>
+<!-- Libraries -->
+<script src="js/jquery.js"></script>
+<script type="text/javascript" src="http://api.filepicker.io/v2/filepicker.js"></script>
+<script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Material Design for Bootstrap -->
+<script src="js/material.min.js"></script>
+<script src="js/ripples.min.js"></script>
+<script>
+$.material.init();
+</script>
+
+<script src="js/account.js"></script>
+
+
+</body>
+</html>
